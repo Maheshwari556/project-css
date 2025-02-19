@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jevelin Inspired Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dN2R8r1K4f5ZxZpZUJ07C3gWClnA7aTZmdm3XmkdV3vR4IGaZ4xeyzE6aDgeXqVXzS3UIH6TRQ2E2WZyTqF0IA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: 0 15px;
+      }
+      
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: normal;
+        transition: color 0.3s;
+      }
+      
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: red;
+      }
+      
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      
+      /* Container & Sections */
+      .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 200px;
+        }
+        .text-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .text-section h1 {
+            text-align: left;
+            font-size: 2rem;
+        }
+        .highlight {
+            color: #ff6600;
+        }
+        .text-section p {
+            text-align: left;
+            font-size: 1rem;
+            margin: 20px 0;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-section h1, .text-section p {
+                text-align: center;
+            }
+            .button {
+                margin: 10px 0;
+            }
+        }
+     .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1300px;
+        margin-top: 80px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 200px;
+      }
+       
+        .text-section {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .text-section h1 {
+        font-size: 48px;
+        color: #222;
+        margin-right: 20px;
+      }
+      
+      .text-section .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      
+      .text-section p {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+      }  */
+      
+      /* Button Styles */
+      .button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 1024px) {
+    .button  {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button  {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button  {
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+}
+
+      .image-section {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .image-section img {
+        width: 100%;
+        max-width: 700px;
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .image-section img:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Services Section */
+      .services {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 200px;
+            margin-top: 20px;
+        }
+        .services h2 {
+            font-size: 2em;
+        }
+        .services p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: #f4f4f4;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+      /* .services {
+        max-width: 600px;
+        text-align: center;
+        margin-top: 40px;
+        padding: 200px 0;
+      }
+      
+      .services h2 {
+        font-size: 32px;z
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .services p {
+        font-size: 16px;
+        color: #888;
+        margin-top: 10px;
+      } */
+      .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 120px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 576px) {
+            .card {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 577px) and (max-width: 767px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .card {
+                width: calc(33.333% - 20px);
+            }
+        }
+        .content2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .text-section {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .btn {
+            background-color:red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .info strong {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .content2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .image-section {
+                flex: 1;
+                max-width: 50%;
+            }
+            .text-section {
+                flex: 1;
+                max-width: 50%;
+                padding-left: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .content2 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-section {
+                padding: 0 20px;
+            }
+            .author {
+                justify-content: center;
+            }
+        }
+        .content3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-section {
+            flex: 1;
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 80px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 45px;
+            line-height: 1.3;
+            color: #333;
+            font-weight: 700px;
+        }
+
+        .btn1 {
+            background:red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn1:hover {
+            background: #555;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin-top: 15px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .info strong {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .info p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content3 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-section {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .btn1 {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+      /* Latest Work & Icons */
+      .services2 {
+        max-width: 600px;
+        text-align: center;
+        margin-top: 0;
+        padding: 200px 0;
+        margin-bottom: 30px;
+      }
+      
+      .services2 h1 {
+        font-size: 60px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .services2 p {
+        font-size: 16px;
+        color: #888;
+        margin-top: 10px;
+      }
+      .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .icons div {
+            flex: 1 1 300px; /* Grow, shrink, and set base width */
+            max-width: 400px;
+        }
+        .icons img:hover {
+      filter: brightness(0.7);
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      mix-blend-mode: multiply;
+  }
+
+        .icons img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .icons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icons div {
+                max-width: 90%;
+            }
+        }
+      
+      .button1 {
+        margin-top: 100px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      
+      .services4 {
+            text-align: center;
+            padding: 20px;
+            margin-top: 100px;
+        }
+
+        .teammates {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+            margin-top: 200px;
+        }
+
+        .team-card {
+            /* background: #f9f9f9; */
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            max-width: 100%;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* ✅ MEDIA QUERIES FOR RESPONSIVENESS ✅ */
+
+        /* 🔹 Tablets & Medium Screens (768px - 1024px) */
+        @media (max-width: 1024px) {
+            .teammates {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller card width */
+                gap: 15px; /* Reduce spacing */
+            }
+
+            .team-card {
+                max-width: 250px; /* Slightly smaller cards */
+            }
+        }
+
+        /* 🔹 Mobile Devices (Below 768px) */
+        @media (max-width: 768px) {
+            .teammates {
+                grid-template-columns: 1fr; /* Single column */
+                gap: 10px;
+            }
+
+            .team-card {
+                max-width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+
+        /* 🔹 Small Mobile Screens (Below 480px) */
+        @media (max-width: 480px) {
+            .services2 h1 {
+                font-size: 22px; /* Smaller title text */
+            }
+
+            .services2 p {
+                font-size: 14px;
+            }
+
+            .team-card {
+                padding: 10px; /* Less padding */
+            }
+        }
+
+      /* Counter Section */
+      .counter {
+        text-align: center;
+        padding: 50px 20px;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 0;
+      }
+      
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      
+      .stat-item {
+        text-align: center;
+        margin: 10px;
+      }
+      
+      .stat-number {
+        font-size: 100px;
+        font-weight: bold;
+        color: red;
+      }
+      
+      .stat-label {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+      }
+      
+      /* Some Number Section */
+      .services3 {
+        max-width: 600px;
+        text-align: center;
+        margin-top: 0;
+        padding: 200px 0;
+        margin-bottom: -100px;
+      }
+      
+      .services3 h1 {
+        font-size: 60px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .services3 p {
+        font-size: 16px;
+        color: #888;
+        margin-top: 10px;
+      }
+      
+      /* Header (Footer Top Part) */
+      header {
+        background-color: #333;
+        padding: 15px 20px;
+      }
+      
+      .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      /* Logo in Header */
+      header .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      /* Navigation Menu */
+      .navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white;
+  color: black;
+  padding: 15px 20px;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color:black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  /* background-color: #555; */
+  border-radius: 5px;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Stack nav links vertically and hide by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;  /* Adjust based on navbar height */
+    right: 20px;
+    /* background-color: #333; */
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav-links a {
+    display: block;
+    width: 100%;
+  }
+  
+  /* When the checkbox is checked, display the nav-links */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+      /* Social Icons */
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+      
+      .social-icons a {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      
+      .social-icons a:hover {
+        color: #ccc;
+      }
+      
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+      }
+      
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .footer-container hr {
+        border: none;
+        border-top: 1px solid #444;
+        margin: 20px 0;
+      }
+      
+      .footer-container p {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+      
+      /* Scroll to Top Button */
+      .scroll-top {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background-color: #555;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .scroll-top:hover {
+        background-color: #777;
+      }
+      
+      /* MEDIA QUERIES */
+      
+      /* For devices with max-width 768px */
+      @media (max-width: 768px) {
+        /* Navbar adjustments */
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background: #fff;
+          padding: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .menu-toggle {
+          display: block;
+        }
+      
+        /* Container adjustments */
+        .container,
+        .content2 {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        /* Make image & text sections full width */
+        .image-section,
+        .text-section {
+          min-width: 100%;
+        }
+      
+        /* Center testimonials */
+        .testimonial {
+          justify-content: center;
+        }
+      
+        /* Adjust teammates grid to 2 columns if needed */
+        .teammates {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      /* For extra small screens (max-width: 576px) */
+      @media only screen and (max-width: 576px) {
+        .container,
+        .content2 {
+          display: block;
+        }
+        button {
+          /* margin-left: 20px; */
+          margin-left: 0px;
+        }
+      
+        /* Adjust teammates grid to 1 column */
+        .teammates {
+          grid-template-columns: 1fr;
+        }
+      
+        /* Reduce heading sizes if necessary */
+        .text-section h1 {
+          font-size: 32px;
+        }
+        .services2 h1,
+        .services3 h1 {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="logo">Jevelin</div>
+      <!-- Hidden checkbox to toggle the menu -->
+      <input type="checkbox" id="menu-toggle" />
+      <!-- Label acts as the hamburger menu button -->
+      <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</label>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="latest project.html">Projects</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <div class="text-section">
+          <h1>
+              Delivering high-quality, effective, and inspiring 
+              <span class="highlight">architecture</span>
+          </h1>
+          <p>Donec et augue pharetra, rutrum leo at.</p>
+          <!-- <button class="button">Latest Project
+            <a href="latest project.html"></a>
+          </button> -->
+          <a href="latest project.html">
+            <button class="button">Latest Project</button>
+          </a>
+      </div>
+      <div class="image-section">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-G3uNjEPiWtU-unsplash3.jpg" alt="Modern Architecture">
+      </div>
+  </div>
+
+    <!-- SERVICES -->
+    <div class="services">
+      <h2>Our main services</h2>
+      <p>
+          Nullam mattis sed justo quis sollicitudin. Maecenas lobortis fermentum fringilla.
+          Vivamus in diam erat.
+      </p>
+  </div>
+
+   <script>
+      document.querySelector(".menu-toggle").addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+      });
+  </script>  
+    <!-- CARDS CONTENT -->
+    <div class="content">
+      <div class="card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>Architecture</h3>
+          <p>Lorem ipsum dolor sit amet, consect tuiscing elit. Mauris vitae undas sodales lectus, non ultrices nisi.</p>
+          <a href="#">Learn more</a>
+      </div>
+      <div class="card">
+          <i class="fas fa-home"></i>
+          <h3>Interior design</h3>
+          <p>Lorem ipsum dolor sit amet, consect tuiscing elit. Mauris vitae undas sodales lectus, non ultrices nisi.</p>
+          <a href="#">Learn more</a>
+      </div>
+      <div class="card">
+          <i class="fas fa-image"></i>
+          <h3>Exterior design</h3>
+          <p>Lorem ipsum dolor sit amet, consect tuiscing elit. Mauris vitae undas sodales lectus, non ultrices nisi.</p>
+          <a href="#">Learn more</a>
+      </div>
+  </div>
+
+    <!-- CONTENT2 SECTION -->
+    <div class="content2">
+      <div class="text-section">
+        <h1 style="text-align: left;">
+          23 floor office <br />
+          building in the heart <br />
+          of London city
+        </h1>
+        <br /><br /><br />
+        <a href="view-project.html">
+        <button class="btn">View project</button>
+        </a>
+        <br /><br /><br />
+        <hr width="50%" />
+        <p class="quote" style="text-align: left;">
+          “Sed ultrices dignissim orci, vel porta justo <br />
+          placerat quis. Vestibulum quis tempor erat”
+        </p>
+        <br /><br /><br />
+        <div class="author" style="align-items: flex-start;">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/Ellipse-43.png" alt="Kate Wilkinson" />
+          <div style="text-align: left;">
+            <strong>Kate Wilkinson</strong>
+            <p style="text-align: left;">Architect</p>
+          </div>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-Pq_b2XMH47c-unsplash.jpg" alt="Office Building" style="align-items:flex-end;" />
+      </div>
+    </div>
+
+    <br /><br /><br />
+  
+    <div class="content3">
+      <div class="image-section">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg" alt="Office Building">
+      </div>
+      <div class="text-section">
+          <h1>
+              Award winning <br>
+              private luxury <br>
+              house
+          </h1>
+          <br><br>
+          <a href="view-project2.html">
+              <button class="btn1">View project</button>
+          </a>
+          <br><br>
+          <hr width="50%">
+          <p class="quote">
+              “Sed ultrices dignissim orci, vel porta justo <br>
+              placerat quis. Vestibulum quis tempor erat”
+          </p>
+          <br><br>
+          <div class="author">
+              <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/Ellipse-44.png" alt="John Doe">
+              <div class="info">
+                  <strong>John Doe</strong>
+                  <p>Architect</p>
+              </div>
+          </div>
+      </div>
+</div>
+    <!-- LATEST WORK & ICONS -->
+    <div class="services2">
+      <h1>Our latest work</h1>
+      <p>
+        Donec eleifend fermentum semper. <br />
+        Etiam enim sapien, feugiat id eros a, lacinia
+      </p>
+    </div>
+    <div class="icons">
+      <div class="central-office">
+        <a href="central-office.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash5.jpg" alt="Central Office" />
+            <p>Central Office</p>
+        </a>
+    </div>
+      <div class="central office">
+        <a href="shopping-center.html">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash4.jpg" alt="Shopping Mall" />
+          <p>Shopping center</p>
+          </a>
+      </div>
+      <div class="central office">
+        <a href="resident-area.html">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash3.jpg" alt="Resident Area" />
+          <p>Resident area</p>
+          </a>
+      </div>
+      <div class="central office">
+        <a href="office-center.html">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash2.jpg" alt="Office Center" />
+          <p>Office center</p>
+          </a>
+      </div>
+  </div>
+<a href="index.html">
+    <button class="button1">view all projects</button>
+  </a>
+    <!-- TEAM SECTION -->
+    <div class="services4">
+      <h1>Meet the Team</h1>
+      <p>Maecenas eget ultrices libero fsce sed convallis</p>
+  </div>
+  <div class="teammates">
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/adult-beard-businessman-11389031.jpg" alt="John Berry" />
+          <h3>John Berry</h3>
+          <p>CEO</p>
+      </div>
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/achievement-adult-business-9374812.jpg" alt="Jan Bruk" />
+          <h3>Jan Bruk</h3>
+          <p>Architect</p>
+      </div>
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/adult-beautiful-beverage-1251090.jpg" alt="Miranda Berry" />
+          <h3>Miranda Berry</h3>
+          <p>Architect</p>
+      </div>
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/adult-desk-facial-expression-1181631.jpg" alt="Elizabeth Wood" />
+          <h3>Elizabeth Wood</h3>
+          <p>Exterior Designer</p>
+      </div>
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/beautiful-woman-brunette-facial-expression-2558680.jpg" alt="Melanie Jones" />
+          <h3>Melanie Jones</h3>
+          <p>Interior Designer</p>
+      </div>
+      <div class="team-card">
+          <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/adult-blur-city-936043.jpg" alt="Philip Berg" />
+          <h3>Philip Berg</h3>
+          <p>Marketing Specialist</p>
+      </div>
+  </div>
+
+    <!-- COUNTER SECTION -->
+    <div class="services3">
+      <h1>Some number</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adip</p>
+    </div>
+  
+    <div class="counter">
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">30</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">600+</div>
+          <div class="stat-label">Finished projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">120</div>
+          <div class="stat-label">Awards</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">70+</div>
+          <div class="stat-label">Employees</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- FOOTER -->
+    <footer>
+      <div class="header-container">
+        <!-- Logo on the left -->
+        <div class="logo">Jevelin</div>
+  
+        <!-- Navigation in the center -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="latest project.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Social Icons on the right -->
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <hr />
+        <p>
+          Copyright &copy;
+          <strong>Jevelin Theme</strong> - Theme by <strong>Shufflehound</strong>
+        </p>
+        <a href="#top" class="scroll-top" title="Back to top">&#9650;</a>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+  .container  {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0; */
+    transform: translateY(50px);
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-section {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: textFadeIn 1.2s ease-out forwards 0.3s;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.image-section img {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: imageZoomIn 1s ease-out forwards 0.5s;
+}
+
+@keyframes imageZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content2  {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0; */
+    transform: translateY(50px);
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-section {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: textFadeIn 1.2s ease-out forwards 0.3s;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.image-section img {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: imageZoomIn 1s ease-out forwards 0.5s;
+}
+
+@keyframes imageZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.content2  .content3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeIn 8s ease-in-out forwards;
+}
+
+.text-section {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: slideInLeft 8s ease-in-out forwards;
+}
+
+.image-section img {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: slideInRight 8s ease-in-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.icons div {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 8s ease-in-out forwards;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.icons div:hover img {
+    transform: scale(1.1);
+    transition: transform 5s ease-in-out;
+}
+.icons div {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 8s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.icons div {
+    transform: rotateY(90deg);
+    opacity: 0;
+    animation: flipIn 8s ease-in-out forwards;
+}
+
+@keyframes flipIn {
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+.icons div {
+    animation: bounceIn 8s ease-in-out forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.button1 {
+    transition: 5s ease-in-out;
+}
+
+.button1:hover {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+
+.central-office, .central.office {
+            position: relative;
+            /* width: 250px;
+            height: 200px; */
+            overflow: hidden;
+        }
+
+        .central-office img, .central.office img {
+            transition: 0.3s ease-in-out;
+        }
+
+        .central-office p, .central.office p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .central-office:hover p, .central.office:hover p {
+            opacity: 1;
+        }
+
+</style>

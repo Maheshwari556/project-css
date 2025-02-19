@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white;
+  color: black;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color:black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  /* background-color: #555; */
+  border-radius: 5px;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Stack nav links vertically and hide by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;  /* Adjust based on navbar height */
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 0;
+    background: #fff;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav-links a {
+    display: block;
+    width: 100%;
+  }
+  
+  /* When the checkbox is checked, display the nav-links */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+
+                /* .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #fff;
+            color:black;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 3px;
+            background: black;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background:#fff;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        } */
+        .breadcrumb-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f8f8;
+            margin-bottom: 40px;
+        }
+        .breadcrumb {
+            color: gray;
+        }
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .sidebar div {
+            width: 40px;
+            height: 40px;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                right: 10px;
+            }
+        }
+/* Container for all cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each card */
+.card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card image */
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Title of the card */
+.card-title {
+  font-size: 1.4rem;
+  margin: 20px;
+}
+
+/* Meta info (author & date) */
+.card-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0 20px;
+}
+
+.card-date {
+  margin-left: 10px;
+  color: #aaa;
+}
+
+/* Excerpt text */
+.card-excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 20px;
+  color: #555;
+}
+
+/* Card footer (category & comments) */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 20px 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.card-category {
+  color: #333;
+  font-weight: 500;
+}
+
+.card-comments {
+  color: #999;
+}
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      body {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+      .card-title {
+        font-size: 1.2rem;
+      }
+      .card-excerpt {
+        font-size: 0.9rem;
+      }
+    }
+      /* Footer */
+      footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .footer-container {
+      margin-top: 20px;
+    }
+    .footer-container hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+    }
+    .scroll-top {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-icons {
+        margin-top: 10px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+          <div class="logo">Jevelin</div>
+          <!-- Hidden checkbox to toggle the menu -->
+          <input type="checkbox" id="menu-toggle" />
+          <!-- Label acts as the hamburger menu button -->
+          <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</label>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="latest project.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+    <section class="breadcrumb-section">
+        <h2>Blog</h2>
+        <div class="breadcrumb">Home > Blog</div>
+    </section>
+    </div>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash12.jpg" alt="Card 1" />
+          </div>
+          <h2 class="card-title">Biggest deals</h2>
+          <p class="card-meta">by shufflehound <span class="card-date">March 25, 2019</span></p>
+          <p class="card-excerpt">
+            A wonderful serenity has taken possession of my entire soul, like these
+            sweet mornings of spring which I enjoy with my whole heart. I am alone,
+            and feel the charm of existence in this spot, which was created for the
+            bliss of souls like mine...
+          </p>
+          <div class="card-footer">
+            <span class="card-category">All Clients</span>
+            <span class="card-comments">0</span>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash14.jpg" alt="Card 2" />
+          </div>
+          <h2 class="card-title">Looking for colors</h2>
+          <p class="card-meta">by shufflehound <span class="card-date">March 25, 2019</span></p>
+          <p class="card-excerpt">
+            A wonderful serenity has taken possession of my entire soul, like these
+            sweet mornings of spring which I enjoy with my whole heart. I am alone,
+            and feel the charm of existence in this spot, which was created for the
+            bliss of souls like mine...
+          </p>
+          <div class="card-footer">
+            <span class="card-category">All News</span>
+            <span class="card-comments">0</span>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash4.jpg" alt="Card 3" />
+          </div>
+          <h2 class="card-title">Colors this year</h2>
+          <p class="card-meta">by shufflehound <span class="card-date">March 25, 2019</span></p>
+          <p class="card-excerpt">
+            A wonderful serenity has taken possession of my entire soul, like these
+            sweet mornings of spring which I enjoy with my whole heart. I am alone,
+            and feel the charm of existence in this spot, which was created for the
+            bliss of souls like mine...
+          </p>
+          <div class="card-footer">
+            <span class="card-category">All Design</span>
+            <span class="card-comments">0</span>
+          </div>
+        </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-image">
+                  <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash8.jpg" alt="Card 3" />
+                </div>
+                <h2 class="card-title">Colors this year</h2>
+                <p class="card-meta">by shufflehound <span class="card-date">March 25, 2019</span></p>
+                <p class="card-excerpt">
+                  A wonderful serenity has taken possession of my entire soul, like these
+                  sweet mornings of spring which I enjoy with my whole heart. I am alone,
+                  and feel the charm of existence in this spot, which was created for the
+                  bliss of souls like mine...
+                </p>
+                <div class="card-footer">
+                  <span class="card-category">All Design</span>
+                  <span class="card-comments">0</span>
+                </div>
+              </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="card-image">
+              <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash3.jpg" alt="Card 3" />
+            </div>
+            <h2 class="card-title">Colors this year</h2>
+            <p class="card-meta">by shufflehound <span class="card-date">March 25, 2019</span></p>
+            <p class="card-excerpt">
+              A wonderful serenity has taken possession of my entire soul, like these
+              sweet mornings of spring which I enjoy with my whole heart. I am alone,
+              and feel the charm of existence in this spot, which was created for the
+              bliss of souls like mine...
+            </p>
+            <div class="card-footer">
+              <span class="card-category">All Design</span>
+              <span class="card-comments">0</span>
+            </div>
+          </div>
+            
+      </div>
+                <!-- FOOTER -->
+                <footer>
+                    <div class="header-container">
+                      <!-- Logo on the left -->
+                      <div class="logo">Jevelin</div>
+                
+                      <!-- Navigation in the center -->
+                      <nav>
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="latest project.html">Projects</a></li>
+                          <li><a href="news.html">News</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </nav>
+                
+                      <!-- Social Icons on the right -->
+                      <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="footer-container">
+                      <hr />
+                      <p>
+                        Copyright &copy;
+                        <strong>Jevelin Theme</strong> - Theme by <strong>Shufflehound</strong>
+                      </p>
+                      <a href="#top" class="scroll-top" title="Back to top">&#9650;</a>
+                    </div>
+                  </footer>
+          
+    
+</body>
+</html>

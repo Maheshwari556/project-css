@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color:white;
+color: black;
+padding: 15px 20px;
+margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo {
+font-size: 24px;
+font-weight: bold;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+display: none;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+font-size: 28px;
+cursor: pointer;
+display: none;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+display: flex;
+gap: 20px;
+}
+
+.nav-links li {
+list-style: none;
+}
+
+.nav-links a {
+color:black;
+text-decoration: none;
+font-size: 18px;
+padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+/* background-color: #555; */
+border-radius: 5px;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+/* Show hamburger icon */
+.menu-toggle {
+display: block;
+}
+
+/* Stack nav links vertically and hide by default */
+.nav-links {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 60px;  /* Adjust based on navbar height */
+right: 20px;
+width: 200px;
+border-radius: 5px;
+padding: 10px 0;
+background: #fff;
+}
+
+.nav-links li {
+text-align: center;
+padding: 10px 0;
+}
+
+.nav-links a {
+display: block;
+width: 100%;
+}
+
+/* When the checkbox is checked, display the nav-links */
+#menu-toggle:checked ~ .nav-links {
+display: flex;
+}
+}
+
+    .breadcrumb-section {
+        text-align: center;
+        padding: 40px 20px;
+        background: #f8f8f8;
+        margin-bottom: 40px;
+    }
+    .breadcrumb {
+        color: gray;
+    }
+    .sidebar {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .sidebar div {
+        width: 40px;
+        height: 40px;
+        background: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    @media (max-width: 768px) {
+        .sidebar {
+            right: 10px;
+        }
+    }
+    .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            /* max-width: 900px; */
+            /* background: white; */
+            padding: 20px;
+            /* border-radius: 8px; */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+        .image-section img {
+            width: 800px;
+            height: 1000px;
+            /* border-radius: 8px; */
+            margin-left: 40px;
+        }
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top:0px;
+            padding: 0px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        details {
+            margin-top: 10px;
+        }
+        button {
+             margin-top: 20px; 
+             padding:  10px;
+            background: #007bff;
+            color: white;
+            /* border: none; */
+            /* border-radius: 5px; */
+            cursor: pointer;
+            width: 70px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+        }
+/* .related-items{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap:20px;
+    width:100%;
+    height: auto;
+} */
+.related-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .shopping-center {
+            flex: 1 1 calc(50% - 20px); /* Default for medium screens */
+            max-width: 300px; /* Limits image size */
+        }
+
+        .shopping-center img {
+            width: 100%;
+            height: 300px;
+            display: block;
+            border-radius: 10px;
+        }
+        .shopping-center p{
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: larger;
+        }
+
+        @media (max-width: 600px) {
+            .shopping-center {
+                flex: 1 1 100%; /* Full width for small screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .shopping-center {
+                flex: 1 1 calc(25% - 20px); /* Four items per row on large screens */
+            }
+        }
+      /* Footer */
+      footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .footer-container {
+      margin-top: 20px;
+    }
+    .footer-container hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+    }
+    .scroll-top {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-icons {
+        margin-top: 10px;
+      }
+    }
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .image-section img {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-content {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    button {
+        width: 80px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        margin-left: 0;
+        max-height: 300px;
+    }
+
+    .text-content {
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 10px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+
+    .text-content {
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+</style>
+</head>
+<body>
+            <!-- NAVIGATION -->
+            <nav class="navbar">
+                <div class="logo">Jevelin</div>
+                <!-- Hidden checkbox to toggle the menu -->
+                <input type="checkbox" id="menu-toggle" />
+                <!-- Label acts as the hamburger menu button -->
+                <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</label>
+                <ul class="nav-links">
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="latest project.html">Projects</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>    
+        <section class="breadcrumb-section">
+            <h2>Portfolio</h2>
+            <div class="breadcrumb">Home > Projects > Resident area</div>
+        </section>
+        </div>
+        <div class="main">
+            <div class="image-section">
+                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash1.jpg" alt="Shopping District" />
+            </div>
+            <div class="text-content">
+                <h1 style="margin-top:0px;">Apartments</h1>
+                <p><b>Drops of rain could be heard hitting the pane, which made him feel quite sad. “How about if I sleep a little bit longer and forget all this nonsense”.</b></p>
+                <ol>
+                    <li>Brainstorming</li>
+                    <li>Designing</li>
+                    <li>Building</li>
+                    <li>Presenting</li>
+                </ol>
+                <p style="font-style: italic;">he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn’t get into that position. However hard he threw himself. </p>
+                <p style="font-style: italic;">“Oh, Yes”, he thought, “</p>
+                <p><b>Drops of rain could be heard hitting the pane </b></p>
+                <p>what a strenuous career it is that I’ve chosen! Travelling day in and day out. Doing business like this takes much more effort than doing your own business at home </p>
+                <details>
+                    <summary>Materials</summary>
+                    <p>
+                        Far far away, behind the word mountains,<br> far from the countries Vokalia and Consonantia,<br> there live the blind texts. <br> <br>
+    
+    – It is a paradisematic <br>
+    – Roasted parts of sentences <br>
+    – Even the all-powerful <br>
+    – Pointing has no control about <br> <br>
+    
+    it is an almost unorthographic <br> life One day however a small line of blind <br> text by the name of Lorem Ipsum decided to.
+      </p>
+     </details>
+                <details>
+                    <summary>Stages</summary>
+                    <p>Far far away, behind the word mountains,<br> far from the countries Vokalia and Consonantia, <br> there live the blind texts. <br> <br>
+    
+                        – It is a paradisematic <br>
+                        – Roasted parts of sentences <br>
+                        – Even the all-powerful <br>
+                        – Pointing has no control about <br>
+                        
+                        </p>
+                </details>
+                <details>
+                    <summary>Foundation</summary>
+                    <p>it is an almost unorthographic life One day however <br> a small line of blind text by <br> the name of Lorem Ipsum decided to.</p>
+                </details>
+                <details>
+                    <summary>Parking</summary>
+                    <p>Far far away, behind the word mountains, <br> far from the countries Vokalia and Consonantia,<br> there live the blind texts. </p>
+                </details>
+                <button width="20px">Share</button>
+            </div>
+        </div>
+        <h1 style="margin-left: 60px; margin-top: 70px; margin-bottom: 0;">Related items </h1>
+    <div class="related-items">
+        <div class="shopping-center">
+            <a href="resident-area.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash3.jpg" alt="Shopping Center 1">
+            </a>
+            <p>Resident area</p>
+        </div>
+        <div class="shopping-center">
+            <a href="office-center.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash2.jpg" alt="Shopping Center 2">
+            </a>
+            <p>Office center</p>
+        </div>
+        <div class="shopping-center">
+            <a href="view-project2.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg" alt="Shopping Center 3">
+            </a>
+            <p>Private House</p>
+        </div>
+        <div class="shopping-center">
+            <a href="shopping-center.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash4.jpg" alt="Shopping Center 4">
+            </a>
+            <p>Shopping center </p>
+        </div>
+    </div>
+            <!-- FOOTER -->
+            <footer>
+                <div class="header-container">
+                  <!-- Logo on the left -->
+                  <div class="logo">Jevelin</div>
+            
+                  <!-- Navigation in the center -->
+                  <nav>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="latest project.html">Projects</a></li>
+                      <li><a href="news.html">News</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+            
+                  <!-- Social Icons on the right -->
+                  <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="footer-container">
+                  <hr />
+                  <p>
+                    Copyright &copy;
+                    <strong>Jevelin Theme</strong> - Theme by <strong>Shufflehound</strong>
+                  </p>
+                  <a href="#top" class="scroll-top" title="Back to top">&#9650;</a>
+                </div>
+              </footer>
+
+</body>
+</html>
+<style>
+    .related-items {
+      display: flex;
+      justify-content: space-around;
+      /* padding: 20px; */
+    }
+  
+    .shopping-center {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .shopping-center img {
+      /* width: 200px; /* Adjust as needed */
+      /* height: auto; */ 
+      transition: transform 1s ease;
+    }
+  
+    .shopping-center:hover img {
+      transform: scale(1.1); /* Zoom in effect */
+      filter: brightness(0.7) saturate(1.2); /* Slightly brighten and saturate */
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)); /* Add gradient overlay */
+    }
+  
+    /* .shopping-center p {
+      text-align: center;
+      margin-top: 5px;
+    } */
+  </style>
+  
