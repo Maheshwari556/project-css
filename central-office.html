@@ -145,7 +145,6 @@ display: flex;
             height: 1000px;
             /* border-radius: 8px; */
             margin-left: 40px;
-            margin-bottom: 0;
         }
         .text-content {
             display: flex;
@@ -354,53 +353,6 @@ display: flex;
         padding: 8px;
     }
 }
-.items {
-            display: grid;
-            grid-template-columns:auto auto auto;
-            gap: 10px;
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 10px;
-            margin-left: 30px;
-            margin-top: 0;
-        }
-
-        .icons, .icons1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            border-radius: 10px;
-            height: 300px; /* Set equal height for all containers */
-            overflow: hidden;
-        }
-
-        .icons img, .icons1 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .items {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-            .icons, .icons1 {
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .items {
-                grid-template-columns: 1fr;
-            }
-            .icons, .icons1 {
-                height: 250px;
-            }
-        }
 
 </style>
 </head>
@@ -421,7 +373,7 @@ display: flex;
               </nav>    
         <section class="breadcrumb-section">
             <h2>Portfolio</h2>
-            <div class="breadcrumb">Home > Projects > Resident area</div>
+            <div class="breadcrumb">Home > Projects >Central office</div>
         </section>
         </div>
         <div class="main">
@@ -429,7 +381,7 @@ display: flex;
                 <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash5.jpg" alt="Shopping District" />
             </div>
             <div class="text-content">
-                <h1 style="margin-top:0px;">Central offices</h1>
+                <h1 style="margin-top:0px;">Central office</h1>
                 <p><b>Drops of rain could be heard hitting the pane, which made him feel quite sad. “How about if I sleep a little bit longer and forget all this nonsense”.</b></p>
                 <ol>
                     <li>Brainstorming</li>
@@ -476,25 +428,13 @@ display: flex;
                 <button width="20px">Share</button>
             </div>
         </div>
-        <div class="items">
-            <div class="icons1">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash6-561x660.jpg" alt="Image 1">
-            </div>
-            <div class="icons">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash12-561x660.jpg" alt="Image 2">
-            </div>
-            <div class="icons">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash11-561x660.jpg" alt="Image 3">
-            </div>
-        </div>
-    
         <h1 style="margin-left: 60px; margin-top: 70px; margin-bottom: 0;">Related items </h1>
     <div class="related-items">
         <div class="shopping-center">
-            <a href="shopping-center.html">
-            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-Pq_b2XMH47c-unsplash.jpg" alt="Shopping Center 1">
+            <a href="residental-area.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash7.jpg" alt="Shopping Center 1">
             </a>
-            <p>Shopping district</p>
+            <p>Residential area</p>
         </div>
         <div class="shopping-center">
             <a href="office-center.html">
@@ -503,16 +443,16 @@ display: flex;
             <p>Office center</p>
         </div>
         <div class="shopping-center">
-            <a href="residental-area.html">
-            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash7.jpg" alt="Shopping Center 3">
-            </a>
-            <p>Residential area</p>
-        </div>
-        <div class="shopping-center">
             <a href="view-project2.html">
-            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg" alt="Shopping Center 4">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg" alt="Shopping Center 3">
             </a>
             <p>Private House</p>
+        </div>
+        <div class="shopping-center">
+            <a href="view-project.html">
+            <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-Pq_b2XMH47c-unsplash.jpg" alt="Shopping Center 4">
+            </a>
+            <p>Shopping district</p>
         </div>
     </div>
             <!-- FOOTER -->
