@@ -249,99 +249,105 @@
           <script src="https://cdn.tailwindcss.com"></script>
         </head>
         <body>
-        
           <!-- Navigation Menu -->
-          <div class="w-full flex justify-center py-5">
-            <nav class="flex flex-col md:flex-row md:space-x-6 text-gray-600 text-sm items-center">
-              <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="all">ALL</a>
-              <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="apartment">APARTMENTS</a>
-              <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="office">OFFICES</a>
-              <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="resident">RESIDENT</a>
-              <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="shopping">SHOPPING</a>
-            </nav>
-          </div>
-          <style>
-            .project-item {
-              position: relative;
-              overflow: hidden; /* Prevent text overflow during transition */
-            }
-          
-            .project-item p {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              opacity: 0;
-              transition: opacity 0.3s ease;
-              background-color: rgba(255, 255, 255, 0.7);
-              padding: 0.5rem;
-              border-radius: 0.25rem;
-              white-space: nowrap; /* Prevent text wrapping */
-            }
-          
-            .project-item:hover p {
-              opacity: 1;
-            }
-          </style>
-          
-          <div class="project-gallery grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
-            <div class="project-item" data-category="all resident">
-              <a href="view-project2.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg"
-                  alt="Modern Private House with large windows" style="height: 300px; width: 100%; object-fit: cover;">
-              </a>
-              <p>Private house</p>
-            </div>
-            <div class="project-item" data-category="shopping">
-              <a href="view-project.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-Pq_b2XMH47c-unsplash.jpg"
-                  alt="Contemporary Private House Design" style="height: 300px; width: 100%; object-fit: cover;">
-              </a>
-              <p>Shopping District</p>
-            </div>
-            <div class="project-item" data-category="apartment resident shopping">
-              <a href="residental-area.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash7.jpg"
-                  alt="Stylish Urban Private House" style="height: 300px; width: 100%; object-fit: cover;">
-              </a>
-              <p>Residential area</p>
-            </div>
-            <div class="project-item" data-category="office">
-              <a href="office-center.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash2.jpg"
-                  alt="Elegant Residential House" style="width: 100%; object-fit: cover;">
-              </a>
-              <p>Office center</p>
-            </div>
-            <div class="project-item" data-category="apartment">
-              <a href="apartment.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash1.jpg"
-                  alt="Minimalist Residential House" style="width: 100%; object-fit: cover;">
-              </a>
-              <p>Apartments</p>
-            </div>
-            <div class="project-item" data-category="office resident">
-              <a href="resident-area.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash3.jpg"
-                  alt="Minimalist Residential House" style="width: 100%; object-fit: cover;">
-              </a>
-              <p>Resident area</p>
-            </div>
-            <div class="project-item" data-category="all">
-              <a href="central-office.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash5.jpg"
-                  alt="Minimalist Residential House" style="width: 100%; object-fit: cover; height: auto;">
-              </a>
-              <p>Central offices</p>
-            </div>
-            <div class="project-item" data-category="shopping">
-              <a href="shopping-center.html">
-                <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash4.jpg"
-                  alt="Minimalist Residential House" style="width: 100%; object-fit: cover; height: auto;">
-              </a>
-              <p>Shopping center</p>
-            </div>
-          </div>
+  <div class="w-full flex justify-center py-5">
+    <nav class="flex flex-col md:flex-row md:space-x-6 text-gray-600 text-sm items-center">
+      <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="all">ALL</a>
+      <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="apartment">APARTMENTS</a>
+      <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="office">OFFICES</a>
+      <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="resident">RESIDENT</a>
+      <a href="#" class="hover:text-gray-800 py-2 md:py-0 filter-tab" data-filter="shopping">SHOPPING</a>
+    </nav>
+  </div>
+
+  <!-- Project Gallery -->
+  <div class="project-gallery grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
+    <div class="project-item resident" data-category="all resident">
+      <a href="view-project2.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/annie-spratt-p5x4IKEkWSo-unsplash.jpg" 
+           alt="Modern Private House with large windows" style="height: 300px; width: 100%; object-fit: cover;">
+          </a>
+          <p>Private House</p>
+    </div>
+    <div class="project-item" data-category="shopping">
+      <a href="view-project.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-Pq_b2XMH47c-unsplash.jpg" 
+           alt="Contemporary Private House Design" style="height: 300px; width: 100%; object-fit: cover;">
+           </a>
+           <p>Shopping district</p>
+    </div>
+    <div class="project-item apartment" data-category="apartment resident shopping">
+      <a href="residental-area.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash7.jpg" 
+           alt="Stylish Urban Private House" style="height: 300px; width: 100%; object-fit: cover;">
+           </a>
+           <p>Residential area</p>
+    </div>
+    <div class="project-item office" data-category="office">
+      <a href="office-center.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash2.jpg" 
+           alt="Elegant Residential House" style="height:auto; width: 100%; object-fit: cover;">
+           </a>
+           <p>Office center</p>
+    </div>
+    <div class="project-item apartment" data-category="apartment">
+      <a href="apartment.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash1.jpg" 
+           alt="Minimalist Residential House" style="height: auto; width: 100%; object-fit: cover;">
+           </a>
+           <p>Apartments</p>
+    </div>
+    <div class="project-item office" data-category="office resident">
+      <a href="resident-area.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash3.jpg" 
+           alt="Minimalist Residential House" style="height: auto; width: 100%; object-fit: cover;">
+           </a>
+           <p>Resident area</p>
+    </div>
+    <div class="project-item" data-category="all">
+      <a href="central-office.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash5.jpg" 
+           alt="Minimalist Residential House" style="height: auto; width: 100%; object-fit: cover;">
+           </a>
+           <p>Central offices</p>
+    </div>
+    <div class="project-item" data-category="shopping">
+      <a href="shopping-center.html">
+      <img src="https://jevelin.shufflehound.com/architect/wp-content/uploads/sites/30/2019/03/joel-filipe-9cU_HC5CND8-unsplash4.jpg" 
+           alt="Minimalist Residential House" style="height: auto; width: 100%; object-fit: cover;">
+           </a>
+           <p>Shopping center</p>
+    </div>
+  </div>
+
+  <!-- JavaScript for filter functionality -->
+  <script>
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        const filter = tab.getAttribute('data-filter');
+
+        // Remove active class from all tabs
+        filterTabs.forEach(item => item.classList.remove('text-gray-800'));
+        // Add active class to clicked tab
+        tab.classList.add('text-gray-800');
+
+        // Filter gallery items based on category
+        projectItems.forEach(item => {
+          // Using includes to allow for multiple categories per item
+          if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+            item.style.display = 'block'; // Show item
+          } else {
+            item.style.display = 'none'; // Hide item
+          }
+        });
+      });
+    });
+  </script>
+
 <style>
   .project-item {
     position: relative;
@@ -421,7 +427,29 @@
             <a href="#top" class="scroll-top" title="Back to top">&#9650;</a>
           </div>
         </footer>
-      
+        <style>
+          .project-item {
+            position: relative;
+            overflow: hidden; /* Prevent text overflow during transition */
+          }
+        
+          .project-item p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            white-space: nowrap; /* Prevent text wrapping */
+          }
+        
+          .project-item:hover p {
+            opacity: 1;
+          }
+        </style>
 
-</body>
-</html>
+
+</b
